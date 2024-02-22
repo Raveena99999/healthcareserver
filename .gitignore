@@ -1,0 +1,4 @@
+node_modules/
+.env
+client
+package-lock.json
