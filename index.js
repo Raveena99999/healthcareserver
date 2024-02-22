@@ -30,7 +30,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(cookieParser());
 app.use(
   cors({
-    origin:"https://healthcareclient.vercel.app/",
+    origin:"https://healthcareclient.vercel.app",
     credentials: true,
     httpOnly: true,
   })
