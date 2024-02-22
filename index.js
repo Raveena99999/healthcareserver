@@ -19,7 +19,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "https://healthcareserver-production.up.railway.app/",
       },
     ],
   },
@@ -30,7 +30,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(cookieParser());
 app.use(
   cors({
-    origin:"http://127.0.0.1:5173",
+    origin:"https://healthcareclient.vercel.app/",
     credentials: true,
     httpOnly: true,
   })
@@ -38,7 +38,7 @@ app.use(
 app.use("/user", userRouter);
 app.use("/blog", blogRouter);
 app.get("/", (req, res) => {
-  res.status(200).send(`<h2>Welcome to my Blogging Website...</h2>`);
+  res.status(200).send(`<h2>Welcome to EHR...</h2>`);
 });
 app.listen(Port, async () => {
   try {
